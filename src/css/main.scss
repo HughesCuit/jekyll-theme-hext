@@ -1,29 +1,29 @@
 @charset "utf-8";
 
 // common
-@import "persephone/variables";
-@import "persephone/keyframes";
-@import "persephone/minxins";
-@import "persephone/common";
-@import "persephone/header";
-@import "persephone/content";
+@import "hext/variables";
+@import "hext/keyframes";
+@import "hext/minxins";
+@import "hext/common";
+@import "hext/header";
+@import "hext/content";
 
 // 404
-@import "persephone/error";
+@import "hext/error";
 
 // archive
-@import "persephone/archive";
+@import "hext/archive";
 
 // home
-@import "persephone/slides";
+@import "hext/slides";
 
 //book
-@import "persephone/summary";
-@import "persephone/book";
-@import "persephone/chapter";
+@import "hext/summary";
+@import "hext/book";
+@import "hext/chapter";
 
 //blog
-@import "persephone/blog";
-@import "persephone/list";
-@import "persephone/post";
-@import "persephone/comments";
+@import "hext/blog";
+@import "hext/list";
+@import "hext/post";
+@import "hext/comments";
