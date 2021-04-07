@@ -1,17 +1,26 @@
 ---
 layout: default
 ---
+
 {%- include header.html -%}
 <main class="post__wrapper">
   {%- include header_nav.html -%}
   <div class="post__top_navs clearfix">
     <nav class="post__archive_path">
-      {%- assign blog_page_path = site.theme_setting.blog_page | default: "index.md" %}
-      {%- assign blog_page = site.pages | where: "path", blog_page_path | first -%}
+      {%- assign blog_page_path = site.theme_setting.blog_page | default:
+      "index.md" %} {%- assign blog_page = site.pages | where: "path",
+      blog_page_path | first -%}
       <a href="{{ blog_page.url | relative_url }}" id="archiveBtn">
         <div class="post__archive_icon">
           <svg width="40" height="40">
-            <circle class="circle-progress" r="18" cy="20" cx="20"  stroke-linejoin="round" stroke-linecap="round" />
+            <circle
+              class="circle-progress"
+              r="18"
+              cy="20"
+              cx="20"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+            />
           </svg>
           <span class="post__archive_icon"></span>
         </div>
@@ -26,17 +35,20 @@ layout: default
         <time>{{ page.date | date: "%Y-%m-%d %H:%M" }}</time>
       </div>
     </header>
-    <div class="post__content content">
-      {{ content | toc | img_prefix }}
+    <div class="post__content content">{{ content | toc | img_prefix }}</div>
+    <div>
+      <span id="busuanzi_container_page_pv" style="display: inline">
+        <div class="padding border border-sub border-dotted fadein-left">
+          本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </div>
+      </span>
     </div>
   </article>
-  {%- if site.comment.enabled -%}
-  {% include comments.html -%}
-  {%- else -%}
-  {% include contact.html -%}
-  {%- endif -%}
+  {%- if site.comment.enabled -%} {% include comments.html -%} {%- else -%} {%
+  include contact.html -%} {%- endif -%}
 </main>
 {%- if site.theme_setting.code or page.code -%}
-  <script>hljs.initHighlightingOnLoad();</script>
-{%- endif -%}
-{%- include footer.html -%}
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+{%- endif -%} {%- include footer.html -%}
